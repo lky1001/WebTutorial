@@ -55,3 +55,19 @@ hr태그는 수평줄을 추가한다.
 ```
 
 [jsfiddle](https://jsfiddle.net/zorLjmgp/)
+
+## 3.6 blockquote 태그
+
+```
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>인용구</p>
+    <blockquote>
+      나는 들여쓴다
+    </blockquote>
+  </body>
+</html>
+```
+
+[jsfiddle](https://jsfiddle.net/4uh0s2tc/)
