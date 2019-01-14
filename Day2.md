@@ -337,15 +337,15 @@ i : 소문자 로마숫자
 
 표를 그릴때 사용하는 태그. 예전에는 표의 테두리를 투명하게 하여 홈페이지의 레이아웃 구성을 많이 하였다. 하지만 지금은 div를 많이 이용.
 
-- <table> : 표를 정의하는 태그
-- <tr> : 표의 각 행을 정의하는 태그. 테이블의 헤더는 <th> 태그를 이용한다. <th> 태그는 기본적으로 굵은 글씨와 가운데 정렬로 표시된다.
-- <td> : 테이블의 데이터나 셀을 정의한다. <td> 태그는 text, images, lists, 다른 table 등 모든 html 엘리먼트를 포함할 수 있다.
-- <caption> : 테이블의 캡션을 정의한다.
-- <colgroup> : 한개 이상의 컬럼의 서식을 정의한다.
-- <col> : colgroup의 각 컬럼에 대한 속성을 정의한다.
-- <thead> : 테이블의 헤더 컨텐츠 그룹을 정의한다.
-- <tbody> : 테이블의 body 컨텐츠 그룹을 정의한다.
-- <tfoot> : 테이블의 footer 컨텐츠 그룹을 정의한다.
+- `<table>` : 표를 정의하는 태그
+- `<tr>` : 표의 각 행을 정의하는 태그. 테이블의 헤더는 `<th>` 태그를 이용한다. `<th>` 태그는 기본적으로 굵은 글씨와 가운데 정렬로 표시된다.
+- `<td>` : 테이블의 데이터나 셀을 정의한다. `<td>` 태그는 text, images, lists, 다른 table 등 모든 html 엘리먼트를 포함할 수 있다.
+- `<caption>` : 테이블의 캡션을 정의한다.
+- `<colgroup>` : 한개 이상의 컬럼의 서식을 정의한다.
+- `<col>` : colgroup의 각 컬럼에 대한 속성을 정의한다.
+- `<thead>` : 테이블의 헤더 컨텐츠 그룹을 정의한다.
+- `<tbody>` : 테이블의 body 컨텐츠 그룹을 정의한다.
+- `<tfoot>` : 테이블의 footer 컨텐츠 그룹을 정의한다.
 
 ```
 <table style="width:100%">
@@ -423,3 +423,38 @@ i : 소문자 로마숫자
 ```
 
 [jsfiddle](https://jsfiddle.net/o8vyhamb/)
+
+## 7 멀티미디어 관련 태그
+
+이미지, 오디오, 동영상 관련 태그
+[브라우저 지원 멀티미디어](https://www.w3schools.com/html/html_media.asp)
+
+## 7.1 이미지(img) 태그
+
+이미지를 삽입할 때 사용한다.
+
+```
+<img src="pic_trulli.jpg" alt="Italian Trulli">
+```
+
+## 7.1.1 img 태그 속성
+
+- src : 이미지 파일의 경로를 지정한다.
+- alt : 이미지가 없을 경우(엑스박스) 나오는 문구 (구 버전의 ie에서는 이미지에 마우스를 올릴 경우 나오는데 잘못된 동작)
+- title : 이미지에 마우스를 올렸을 경우 나오는 문구. alt가 아니라 title을 써야 한다.
+- width : 이미지의 가로 크기
+- height : 이미지의 세로 크기
+
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>HTML Image</h2>
+<img src="pic_trulli.jpg" alt="이미지 없어요" width="500" height="333" title="마우스 올려보세요">
+
+</body>
+</html>
+```
+
+[jsfiddle](https://jsfiddle.net/qcszpwhg/)
