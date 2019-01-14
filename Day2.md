@@ -448,12 +448,12 @@ i : 소문자 로마숫자
 ```
 <!DOCTYPE html>
 <html>
-<body>
+  <body>
 
-<h2>HTML Image</h2>
-<img src="pic_trulli.jpg" alt="이미지 없어요" width="500" height="333" title="마우스 올려보세요">
+    <h2>HTML Image</h2>
+    <img src="pic_trulli.jpg" alt="이미지 없어요" width="500" height="333" title="마우스 올려보세요">
 
-</body>
+  </body>
 </html>
 ```
 
