@@ -248,7 +248,7 @@ square : 채워진 사각형
 
 [jsfiddle](https://jsfiddle.net/v5h2sxy9/)
 
-## 5.1 ol 순서가 있는 목록 (Ordered List)
+## 5.2 ol 순서가 있는 목록 (Ordered List)
 
 - type 속성 값
 
@@ -306,3 +306,28 @@ i : 소문자 로마숫자
 ```
 
 [jsfiddle](https://jsfiddle.net/7djkc8qv/)
+
+5.3 중첩 목록
+중첩 목록은 네비게이션 메뉴를 만들때 등에 주로 사용된다.
+참고 : https://ant.design/docs/react/i18n 좌측 사이드 메뉴
+
+```
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>중첩 목록</h2>
+    <ul>
+      <li>Coffee</li>
+      <li>Tea
+        <ol>
+          <li>Chamomile</li>
+          <li>Lemon Tea</li>
+        </ol>
+      </li>
+      <li>Milk</li>
+    </ul>
+  </body>
+</html>
+```
+
+[jsfiddle](https://jsfiddle.net/hg0b2epL/)
