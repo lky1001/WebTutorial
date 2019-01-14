@@ -307,7 +307,8 @@ i : 소문자 로마숫자
 
 [jsfiddle](https://jsfiddle.net/7djkc8qv/)
 
-5.3 중첩 목록
+## 5.3 중첩 목록
+
 중첩 목록은 네비게이션 메뉴를 만들때 등에 주로 사용된다.
 참고 : https://ant.design/docs/react/i18n 좌측 사이드 메뉴
 
@@ -331,3 +332,94 @@ i : 소문자 로마숫자
 ```
 
 [jsfiddle](https://jsfiddle.net/hg0b2epL/)
+
+## 6 표(Table) tag (https://www.w3schools.com/html/html_tables.asp)
+
+표를 그릴때 사용하는 태그. 예전에는 표의 테두리를 투명하게 하여 홈페이지의 레이아웃 구성을 많이 하였다. 하지만 지금은 div를 많이 이용.
+
+- <table> : 표를 정의하는 태그
+- <tr> : 표의 각 행을 정의하는 태그. 테이블의 헤더는 <th> 태그를 이용한다. <th> 태그는 기본적으로 굵은 글씨와 가운데 정렬로 표시된다.
+- <td> : 테이블의 데이터나 셀을 정의한다. <td> 태그는 text, images, lists, 다른 table 등 모든 html 엘리먼트를 포함할 수 있다.
+- <caption> : 테이블의 캡션을 정의한다.
+- <colgroup> : 한개 이상의 컬럼의 서식을 정의한다.
+- <col> : colgroup의 각 컬럼에 대한 속성을 정의한다.
+- <thead> : 테이블의 헤더 컨텐츠 그룹을 정의한다.
+- <tbody> : 테이블의 body 컨텐츠 그룹을 정의한다.
+- <tfoot> : 테이블의 footer 컨텐츠 그룹을 정의한다.
+
+```
+<table style="width:100%">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+</table>
+```
+
+```
+<table style="width:100%">
+  <caption>Monthly savings</caption>
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+  <tr>
+    <td>February</td>
+    <td>$50</td>
+  </tr>
+</table>
+```
+
+[jsfiddle](https://jsfiddle.net/xvjsu2zf/)
+
+## 6.1 Table 태그의 속성
+
+- rowspan : 행 병합
+- colspan : 셀 병합
+
+```
+<table style="width:100%">
+  <tr>
+    <th>Name</th>
+    <th colspan="2">Telephone</th>
+  </tr>
+  <tr>
+    <td>Bill Gates</td>
+    <td>55577854</td>
+    <td>55577855</td>
+  </tr>
+</table>
+```
+
+```
+<table style="width:100%">
+  <tr>
+    <th>Name:</th>
+    <td>Bill Gates</td>
+  </tr>
+  <tr>
+    <th rowspan="2">Telephone:</th>
+    <td>55577854</td>
+  </tr>
+  <tr>
+    <td>55577855</td>
+  </tr>
+</table>
+```
+
+[jsfiddle](https://jsfiddle.net/o8vyhamb/)
