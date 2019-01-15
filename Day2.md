@@ -460,6 +460,24 @@ i : 소문자 로마숫자
 [jsfiddle](https://jsfiddle.net/qcszpwhg/)
 
 ## 7.2 오디오 (audio) 태그
+HTML5에서 새로 생긴 오디오를 포함하는 태그이다.
+
+```
+<!DOCTYPE html>
+<html>
+  <body>
+    <audio src="test.mp3" controls/>
+  </body>
+</html>
+```
+
+## 7.2.1 오디오 태그 속성
+
+- src : 오디오 파일의 경로를 지정한다.
+- preload : 오디오 파일을 모두 다운로드하고 재생한다.
+- autoplay : 오디오 파일을 자동으로 재생한다.
+- loop : 반복 재생 여부
+- controls : 오디오 콘트롤 도구를 표시할지 여부
 
 ## 7.3 비디오 (video) 태그
 
