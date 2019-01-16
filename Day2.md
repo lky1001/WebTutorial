@@ -1,4 +1,86 @@
-## 3.3 pre 태그 (Preformatted text)
+
+## 3.3 본문 태그
+### 3.3.1 p 태그
+단락 (Paragraphs)을 지정.
+
+https://www.w3schools.com/html/html_paragraphs.asp
+
+```
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>나는 머리이다.</h1>
+    <p>이 곳은 1단락이다.</p>
+    <p>이 곳은 2단락이다.</p>
+  </body>
+</html>
+```
+
+[jsfiddle](https://jsfiddle.net/46xzytaf/)
+
+### 3.3.2 br 태그
+br 태그는 강제로 줄을 바꾸는(개행, line break) 역할을 한다. br 태그는 빈 요소(empty element)로 종료태그가 없다.
+
+```
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>나는<br>문단중에<br>줄이 바꼈다. 강제로</p>
+  </body>
+</html>
+```
+
+[jsfiddle](https://jsfiddle.net/cqhe4tfw/)
+
+*HTML에서는 공백을 1개 이상 연속으로 넣어도 1개로만 표시된다.*
+*줄바꿈도 1개의 공백으로 표시된다.*
+
+```
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>HTML에서는                    공백을 1개 이상 연속으로 넣어도 1개로만 표시된다.</p>
+    <p>
+        10줄을 띄었지만 
+
+
+
+
+
+
+
+
+1칸의 띄어쓰기가 됐다.
+    </p>
+  </body>
+</html>
+```
+
+[jsfiddle](https://jsfiddle.net/erhz12ax/)
+
+역속적인 공백을 사용하고 싶으면 HTML에서는 아래의 문자를 쓴다.(TMI : https://namu.wiki/w/NBSP)
+
+```
+&nbsp;
+```
+
+U+00A0, 
+NO-BREAK SPACE. 
+줄여서 NBSP.
+
+```
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>나는 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;여러칸이 띄워졌지롱</p>
+  </body>
+</html>
+```
+
+[jsfiddle](https://jsfiddle.net/y3juvz8a/)
+
+
+## 3.3.3 pre 태그 (Preformatted text)
 
 pre 태그 내부에 있는 컨텐츠는 작성한 그대로 화면에 보이게 된다.
 
@@ -471,14 +553,88 @@ HTML5에서 새로 생긴 오디오를 포함하는 태그이다.
 </html>
 ```
 
+source 태그를 이용해 여러 가지 파일을 지정할 수 있다.
+
+```
+<!DOCTYPE html>
+<html>
+  <body>
+    <audio controls>
+      <source src="test.mp3" type="audio/mpeg">
+      <source src="test2.ogg" type="audio/ogg">
+    </audio>
+  </body>
+</html>
+```
+
+[jsfiddle](https://jsfiddle.net/p8qtfr9m/)
+
 ## 7.2.1 오디오 태그 속성
 
 - src : 오디오 파일의 경로를 지정한다.
-- preload : 오디오 파일을 모두 다운로드하고 재생한다.
-- autoplay : 오디오 파일을 자동으로 재생한다.
+- preload : 오디오 파일을 모두 다운로드하고(불러오고) 재생한다.
+- autoplay : 페이지를 열때 오디오 파일을 자동으로 재생한다.
 - loop : 반복 재생 여부
 - controls : 오디오 콘트롤 도구를 표시할지 여부
 
 ## 7.3 비디오 (video) 태그
+HTML5에서 새로 생긴 비디오를 포함하는 태그이다.
 
-## 7.4 유투브 넣어 보기
+```
+<!DOCTYPE html>
+<html>
+  <body>
+    <video width="640" height="360" controls>
+      <source src="assets/video/wildlife.mp4" type="video/mp4">
+      <source src="assets/video/wildlife.webm" type="video/webm">
+    </video>
+  </body>
+</html>
+```
+
+[jsfiddle](https://jsfiddle.net/fn0t9svx/)
+
+## 7.3.1 비디오 태그 속성
+
+- src : 동영상 파일의 경로를 지정한다.
+- poster : 동영상 재생을 준비하는 동안 나올 썸네일 이미지를 지정한다.
+- preload : 비디오 파일을 모두 다운로드하고(불러오고) 재생한다.
+- autoplay : 페이지를 열때 비디오 파일을 자동으로 재생한다.
+- loop : 반복 재생 여부
+- controls : 비디오 콘트롤 도구를 표시할지 여부
+- width : 비디오의 가로 크기
+- height : 비디오의 세로 크기
+
+## 7.4 Youtube 넣어 보기
+Youtue 영상을 넣는 방법에는 여러가지가 있으나 object나 embed는 deprecated되었고 w3schools에서 추천하는 iframe을 이용한다.
+
+기본적으로 Youtube영상의 id를 넣으면 된다. (예제에서 id는 tgbNymZ7vqY)
+```
+<!DOCTYPE html>
+<html>
+  <body>
+    <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+    </iframe>
+  </body>
+</html>
+```
+
+영상을 자동재생하려면 autoplay라는 파라미터(쿼리스트링)를 이용한다.
+0이 디폴트이며 자동재생 안함. 1이 재동재생.
+* 자동 재생은 방문자가 원치 않을 경는 경우도 많으니 사용자 경험을 해치지 않게 신중히 결정*
+
+```
+<!DOCTYPE html>
+<html>
+  <body>
+    <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1">
+    </iframe>
+  </body>
+</html>
+```
+
+그외 파라미터
+- loop : 반복재생, 0(미설정)이 기본값, 1이 설정
+- controls : Youtube 콘트롤 표시 여부, 0(미표시)이 기본값, 1이 설정
+
+[jsfiddle](https://jsfiddle.net/bo4ftg65/)
