@@ -252,7 +252,7 @@ fieldset 태그는 입력양식들을 그룹화할 때 사용한다. legend 태�
 
 [jsfiddle](https://jsfiddle.net/znaurw6x/)
 
-## 9 레이아웃 구성
+## 9. 레이아웃 구성
 
 참고 : https://poiemaweb.com/html5-tag-structure
 
@@ -327,3 +327,6 @@ div와 span의 배치
 ```
 
 [jsfiddle](https://jsfiddle.net/hdx9bvea/)
+
+## 10. 기타 태그들
+https://www.w3schools.com/tags/
