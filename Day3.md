@@ -252,6 +252,37 @@ fieldset 태그는 입력양식들을 그룹화할 때 사용한다. legend 태�
 
 [jsfiddle](https://jsfiddle.net/znaurw6x/)
 
-## 8.7 레이아웃 구성
+## 9 레이아웃 구성
 
-https://poiemaweb.com/html5-tag-structure
+참고 : https://poiemaweb.com/html5-tag-structure
+
+레이아웃을 구성하는 태그에는 ```<div>```와 ```<span>```이 있다. 둘의 차이는 ```<span>```태그는 display가 inline속성이라는 점이다.
+div는 박스 형태로 레이아웃이 형성되지만 span은 줄 단위로 레이아웃이 형성되기 때문에 아래의 예제와 같이 결과가 다르다.
+
+```
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="euc-kr">
+<style type="text/css">
+    #div1 {
+        background-color: yellow;
+        padding: 10px;
+    }
+    #span1 {
+        background-color: cyan;
+    }
+</style>
+</head>
+<body>
+    <div id="div1">
+지금의 약세장을 극복할 수 있는 종목에 관심을 갖으라고 덧붙였다.', '부모에게 아이와 신뢰를 쌓을 수 있도록 특별한 대화 시간을 갖으라고 권한다.'에서 '갖으라고'라고 썼는데, 이것이 맞는 표현인지요? '가지라고'라고 쓰는 것이 맞는 것이 아닌지요?
+    </div><br/>
+    <span id="span1">
+표준어 규정-표준어 사정 원칙' 제16항에서는 준말의 활용형에 제한을 가하는 규정을 제시하고 있습니다. '가지다'의 준말 '갖다'는 어간 '갖' 뒤에 모음으로 시작하는 어미가 붙어 '갖아, 갖아라, 갖았다, 갖으라고'와 같이 활용하지 못합니다. 제시하신 문장에는 '갖다'의 본말인 '가지다'의 어간 '가지-' 뒤에 어미 '-라고'가 붙은 활용형 '가지라고'를 쓰는 것이 알맞습니다.
+    </span>
+</body>
+</html>
+```
+
+[jsfiddle](https://jsfiddle.net/fsgy4hd3/)
