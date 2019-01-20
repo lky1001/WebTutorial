@@ -269,9 +269,11 @@ div는 width와 height의 크기를 갖을 수 있지만 span은 inline 속성�
     #div1 {
         background-color: yellow;
         padding: 10px;
+        border: 1px solid;
     }
     #span1 {
         background-color: cyan;
+        border: 1px solid;
     }
 </style>
 </head>
@@ -286,4 +288,4 @@ div는 width와 height의 크기를 갖을 수 있지만 span은 inline 속성�
 </html>
 ```
 
-[jsfiddle](https://jsfiddle.net/fsgy4hd3/)
+[jsfiddle](https://jsfiddle.net/2c3u7y8p/)
