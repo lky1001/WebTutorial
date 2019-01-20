@@ -264,7 +264,6 @@ div는 width와 height의 크기를 갖을 수 있지만 span은 inline 속성�
 <!DOCTYPE HTML>
 <html>
 <head>
-<meta charset="euc-kr">
 <style type="text/css">
     #div1 {
         background-color: yellow;
@@ -289,3 +288,42 @@ div는 width와 height의 크기를 갖을 수 있지만 span은 inline 속성�
 ```
 
 [jsfiddle](https://jsfiddle.net/2c3u7y8p/)
+
+div와 span의 배치
+
+```
+<!DOCTYPE HTML>
+<html>
+<head>
+<style type="text/css">
+    div {
+        width: 300px; height: 20px;
+        border: 1px solid; padding: 5px;
+        margin: 10px;
+    }
+    #div1 {background-color: red;}
+    #div2 {background-color: yellow;}
+    #div3 {background-color: blue;}
+     
+    span {
+        width: 300px; height: 20px;
+        border: 1px solid; padding: 5px;
+        margin: 10px;
+    }
+    #span1 {background-color: red; padding: 5px;}
+    #span2 {background-color: yellow;}
+    #span3 {background-color: blue;}
+</style>
+</head>
+<body>
+    <div id="div1">div 1</div>
+    <div id="div2">div 2</div>
+    <div id="div3">div 3</div>
+    <span id="span1">span 1</span>
+    <span id="span2">span 2</span>
+    <span id="span3">span 3</span>
+</body>
+</html>
+```
+
+[jsfiddle](https://jsfiddle.net/hdx9bvea/)
