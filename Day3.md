@@ -258,6 +258,7 @@ fieldset 태그는 입력양식들을 그룹화할 때 사용한다. legend 태�
 
 레이아웃을 구성하는 태그에는 ```<div>```와 ```<span>```이 있다. 둘의 차이는 ```<span>```태그는 display가 inline속성이라는 점이다.
 div는 박스 형태로 레이아웃이 형성되지만 span은 줄 단위로 레이아웃이 형성되기 때문에 아래의 예제와 같이 결과가 다르다.
+div는 width와 height의 크기를 갖을 수 있지만 span은 inline 속성이기 때문에 크기를 갖을 수 없다.
 
 ```
 <!DOCTYPE HTML>
