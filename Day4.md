@@ -41,3 +41,14 @@ body {
   color: blue;
 }
 ```
+
+### 1.3 밸류(Value, 속성값)
+
+스타일을 적용하기 위해서 프로퍼티에 지정된 값을 정해줘야 한다. 값은 특정한 단어나 색상 값 또는 크기 단위 등으로 표현된다. 자세한 단위 [참고](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
+
+```
+body {
+  background: #e9e9e9;
+  color: blue;
+  font-size: 19pt;
+}
