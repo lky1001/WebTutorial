@@ -52,3 +52,11 @@ body {
   color: blue;
   font-size: 19pt;
 }
+
+## 2 html에 css 적용 방법
+
+### 2.1 html 페이지 내장(embedded)
+
+### 2.2 link
+
+### 3.3 inline style
