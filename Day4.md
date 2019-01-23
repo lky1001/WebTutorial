@@ -78,4 +78,38 @@ HTML 문서 내에 css를 내장한다.
 
 ### 2.2 link
 
+HTML 문서에서 외부에 작성된 css 파일을 링크한다.
+
+index.html
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <h1>덕덕월드</h1>
+    <p>안늉</p>
+  </body>
+</html>
+```
+
+style.css
+```
+h1 { color: red; }
+p  { background: blue; }
+```
+
 ### 3.3 inline style
+
+HTML 엘리먼트의 style 속성에 css를 작성한다.
+
+```
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1 style="color: red">덕덕월드</h1>
+    <p style="background: aqua">안늉</p>
+  </body>
+</html>
+```
