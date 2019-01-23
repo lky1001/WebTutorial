@@ -52,10 +52,29 @@ body {
   color: blue;
   font-size: 19pt;
 }
+```
 
 ## 2 html에 css 적용 방법
 
 ### 2.1 html 페이지 내장(embedded)
+
+HTML 문서 내에 css를 내장한다. 
+
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      h1 { color: red; }
+      p  { background: aqua; }
+    </style>
+  </head>
+  <body>
+    <h1>덕덕월드 </h1>
+    <p>안늉</p>
+  </body>
+</html>
+```
 
 ### 2.2 link
 
