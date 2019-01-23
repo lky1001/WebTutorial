@@ -70,7 +70,7 @@ HTML 문서 내에 css를 내장한다.
     </style>
   </head>
   <body>
-    <h1>덕덕월드 </h1>
+    <h1>덕덕월드</h1>
     <p>안늉</p>
   </body>
 </html>
