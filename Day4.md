@@ -22,7 +22,11 @@ HTML5에서는 HTML는 문서의 정의, 구조화를 담당하고, CSS는 styli
 
 (출처 : http://www.nextree.co.kr/p8468/)
 
-### 1.1 셀렉터 (Selector, 선택자)
+위와 같은 것을 Rule Set(또는 Rule)이라 하며 셀렉터에 의해 선택된 특정 HTML 엘리먼트를 어떻게 렌더링(Rendering)할 것인지 브라우저에 지시하는 역할을 한다. 위의 CSS Rule set은 HTML 문서에 속해 있는 셀렉터를 통해 모든 p 요소를 선택한 후 선택된 p 요소의 스타일을 선언 블록에서 정의하고 있다.
+
+이와 같은 Rule Set의 모아 놓을 것을(집합) 스타일시트(Style Sheet)라 한다.
+
+### 1.2 셀렉터 (Selector, 선택자)
 
 HTML 요소에 스타일을 적용하기 위해서는 먼저 **어떤 요소에 스타일을 적용할지 선택**할 수 있어야 한다.
 셀렉터는 CSS에서 제공하는 HTML 요소를 선택하는 방법이다.
@@ -37,7 +41,7 @@ body {
 
 위의 예제에서 body 부분이 셀렉터이다. 셀럭터 안의 선언 블록 `{ }` 내부에 스타일 속성과 값을 지정한다.
 
-### 1.2 프로퍼티(Property, 속성)
+### 1.3 프로퍼티(Property, 속성)
 
 셀럭터로 스타일을 적용 원하는 HTML 엘리먼트를 선택한 후 `{ }` 내부에 `프로퍼티: 밸류` 형식으로 원하는 스타일을 지정한다.
 프로퍼티는 여러 개를 적용할 수 있으며 `;`으로 각 프로퍼티를 구분해 준다.
@@ -49,7 +53,7 @@ body {
 }
 ```
 
-### 1.3 밸류(Value, 속성값)
+### 1.4 밸류(Value, 속성값)
 
 스타일을 적용하기 위해서 프로퍼티에 지정된 값을 정해줘야 한다. 값은 특정한 단어나 색상 값 또는 크기 단위 등으로 표현된다. 자세한 단위 [참고](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
 
@@ -126,3 +130,37 @@ HTML 엘리먼트의 style 속성에 css를 작성한다.
 ## 3. 선택자 (Selector)
 
 CSS 선택자는 HTML 엘리먼트의 name, id, class, 기타 속성 등으로 스타일을 적용할 HTML 엘리먼트를 선택하는 역할을 한다. 선택자를 이용해서 HTML 엘리먼트를 특정한 후 선택된 요소에 스타일을 적용하게 되는 것이다.
+
+### 3.1 전체 선택자(Universal Selector)
+
+### 3.2 태그 선택자(Type Selector)
+
+### 3.3 클래스 선택자(Class Selector)
+
+### 3.4 ID 선택자(ID Selector)
+
+### 3.5 복합 선택자(Combinator)
+
+### 3.5.1 자손 셀렉터(Descendant Combinator)
+
+### 3.5.2 자식 셀렉터(Child Combinator)
+
+### 3.5.3 형제(동위) 셀렉터(Sibling Combinator)
+
+### 3.5.3.1 인접 형제 셀렉터(Adjacent Sibling Combinator)
+
+### 3.5.3.2 일반 형제 셀렉터(General Sibling Combinator)
+
+### 3.6 속성 선택자(Attribute Selector)
+
+### 3.7 가상 클래스 셀렉터(Pseudo-Class Selector)
+
+### 3.7.1 링크 셀렉터(Link pseudo-classes), 동적 셀렉터(User action pseudo-classes)
+
+### 3.7.2 UI 요소 상태 셀렉터(UI element states pseudo-classes)
+
+### 3.7.3 구조 가상 클래스 셀렉터(Structural pseudo-classes)
+
+### 3.7.4 부정 셀렉터(Negation pseudo-class)
+
+### 3.8 가상 요소 셀렉터(Pseudo-Element Selector)
