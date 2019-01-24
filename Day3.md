@@ -11,7 +11,7 @@
 - action : 입력된 내용이 전송될 URL을 지정한다.
 - method : http 메소드를 지정한다. get, post 등이 있으며 자세한 내용은 [모질라](https://developer.mozilla.org/ko/docs/Web/HTTP/Methods)
 
-아래 예제의 전송을 클릭하면 action 주소인 https://www.everyeos.com/users으로 id와 password가 body에 담겨서 전송된다.
+아래 예제의 전송을 클릭하면 action 주소인 ```https://www.everyeos.com/users```로 id와 password가 body에 담겨서 전송된다.
 
 ```
 <!DOCTYPE html>
