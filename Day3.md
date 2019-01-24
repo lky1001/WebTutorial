@@ -252,6 +252,11 @@ fieldset 태그는 입력양식들을 그룹화할 때 사용한다. legend 태�
 
 [jsfiddle](https://jsfiddle.net/znaurw6x/)
 
+## 8.7 event 속성
+
+https://www.w3schools.com/tags/ref_eventattributes.asp
+https://www.w3schools.com/js/js_events_examples.asp
+
 ## 9 레이아웃 구성
 
 참고 : https://poiemaweb.com/html5-tag-structure
