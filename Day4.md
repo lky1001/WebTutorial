@@ -2,11 +2,12 @@
 
 CSS(Cascading Style Sheets)는 HTML 요소의 스타일을 정의하는 역할을 한다. [W3C 표준](https://www.w3.org/Style/CSS/#specs)이며, HTML 뿐만아니라 XHTML, XML에도 사용한다고 한다.
 
-HTML5 이전 HTML에는 style을 컨트롤할 수 있는 태그(font, center)가 존재하여 CSS가 없이도 어느 정도의 스타일 표현이 가능하였으나 
+HTML5 이전 HTML에는 style을 컨트롤할 수 있는 태그(font, center)가 존재하여 CSS가 없이도 어느 정도의 스타일 표현이 가능하였으나
 
 HTML5에서는 HTML는 문서의 정의, 구조화를 담당하고, CSS는 styling의 정의 각자의 역할에 충실하기 위해 분리되었다고 한다.
 
 ## 버전
+
 - CSS 1 : 1996년, 더 이상 사용하지 않음
 - CSS 2 : 1998년
 - CSS 3 : 2005년
@@ -14,6 +15,11 @@ HTML5에서는 HTML는 문서의 정의, 구조화를 담당하고, CSS는 styli
 ### CSS 검사도구 : https://jigsaw.w3.org/css-validator/
 
 ## 1. CSS에서 사용되는 용어
+
+### 1.1 룰셋 (Rule Set)
+
+![Rule Set](http://www.nextree.co.kr/content/images/2016/09/yrkim-140327-selector-04.png)
+(출처 : http://www.nextree.co.kr/p8468/)
 
 ### 1.1 셀렉터 (Selector, 선택자)
 
@@ -28,12 +34,12 @@ body {
 }
 ```
 
-위의 예제에서 body 부분이 셀렉터이다. 셀럭터 안의 선언 블록 ```{ }``` 내부에 스타일 속성과 값을 지정한다.
+위의 예제에서 body 부분이 셀렉터이다. 셀럭터 안의 선언 블록 `{ }` 내부에 스타일 속성과 값을 지정한다.
 
 ### 1.2 프로퍼티(Property, 속성)
 
-셀럭터로 스타일을 적용 원하는 HTML 엘리먼트를 선택한 후 ```{ }``` 내부에 ```프로퍼티: 밸류``` 형식으로 원하는 스타일을 지정한다.
-프로퍼티는 여러 개를 적용할 수 있으며 ```;```으로 각 프로퍼티를 구분해 준다.
+셀럭터로 스타일을 적용 원하는 HTML 엘리먼트를 선택한 후 `{ }` 내부에 `프로퍼티: 밸류` 형식으로 원하는 스타일을 지정한다.
+프로퍼티는 여러 개를 적용할 수 있으며 `;`으로 각 프로퍼티를 구분해 준다.
 
 ```
 body {
@@ -58,7 +64,7 @@ body {
 
 ### 2.1 html 페이지 내장(embedded)
 
-HTML 문서 내에 css를 내장한다. 
+HTML 문서 내에 css를 내장한다.
 
 ```
 <!DOCTYPE html>
@@ -81,6 +87,7 @@ HTML 문서 내에 css를 내장한다.
 HTML 문서에서 외부에 작성된 css 파일을 링크한다.
 
 index.html
+
 ```
 <!DOCTYPE html>
 <html>
@@ -95,6 +102,7 @@ index.html
 ```
 
 style.css
+
 ```
 h1 { color: red; }
 p  { background: blue; }
@@ -113,3 +121,7 @@ HTML 엘리먼트의 style 속성에 css를 작성한다.
   </body>
 </html>
 ```
+
+## 3. 선택자 (Selector)
+
+CSS 선택자는 HTML 엘리먼트의 name, id, class, 기타 속성 등으로 스타일을 적용할 HTML 엘리먼트를 선택하는 역할을 한다. 선택자를 이용해서 HTML 엘리먼트를 특정한 후 선택된 요소에 스타일을 적용하게 되는 것이다.
