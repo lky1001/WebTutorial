@@ -18,7 +18,8 @@ HTML5에서는 HTML는 문서의 정의, 구조화를 담당하고, CSS는 styli
 
 ### 1.1 룰셋 (Rule Set)
 
-![Rule Set](http://www.nextree.co.kr/content/images/2016/09/yrkim-140327-selector-04.png)
+<img src="http://www.nextree.co.kr/content/images/2016/09/yrkim-140327-selector-04.png"/>
+
 (출처 : http://www.nextree.co.kr/p8468/)
 
 ### 1.1 셀렉터 (Selector, 선택자)
