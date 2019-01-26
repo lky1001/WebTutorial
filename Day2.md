@@ -1,6 +1,7 @@
-
 ## 3.3 본문 태그
+
 ### 3.3.1 p 태그
+
 단락 (Paragraphs)을 지정.
 
 https://www.w3schools.com/html/html_paragraphs.asp
@@ -19,6 +20,7 @@ https://www.w3schools.com/html/html_paragraphs.asp
 [jsfiddle](https://jsfiddle.net/46xzytaf/)
 
 ### 3.3.2 br 태그
+
 br 태그는 강제로 줄을 바꾸는(개행, line break) 역할을 한다. br 태그는 빈 요소(empty element)로 종료태그가 없다.
 
 ```
@@ -32,8 +34,8 @@ br 태그는 강제로 줄을 바꾸는(개행, line break) 역할을 한다. br
 
 [jsfiddle](https://jsfiddle.net/cqhe4tfw/)
 
-*HTML에서는 공백을 1개 이상 연속으로 넣어도 1개로만 표시된다.*
-*줄바꿈도 1개의 공백으로 표시된다.*
+_HTML에서는 공백을 1개 이상 연속으로 넣어도 1개로만 표시된다._
+_줄바꿈도 1개의 공백으로 표시된다._
 
 ```
 <!DOCTYPE html>
@@ -41,7 +43,7 @@ br 태그는 강제로 줄을 바꾸는(개행, line break) 역할을 한다. br
   <body>
     <p>HTML에서는                    공백을 1개 이상 연속으로 넣어도 1개로만 표시된다.</p>
     <p>
-        10줄을 띄었지만 
+        10줄을 띄었지만
 
 
 
@@ -64,8 +66,8 @@ br 태그는 강제로 줄을 바꾸는(개행, line break) 역할을 한다. br
 &nbsp;
 ```
 
-U+00A0, 
-NO-BREAK SPACE. 
+U+00A0,
+NO-BREAK SPACE.
 줄여서 NBSP.
 
 ```
@@ -78,7 +80,6 @@ NO-BREAK SPACE.
 ```
 
 [jsfiddle](https://jsfiddle.net/y3juvz8a/)
-
 
 ## 3.3.3 pre 태그 (Preformatted text)
 
@@ -216,7 +217,7 @@ html/index.html
 - `<a href="http://www.everyeos.com/index.html">aaa</a>`
 - 상대 URL : 자신의 현재 위치를 기준으로 한 URL
 - `<a href="aaa.html">aaa</a>`
-- fragment identifier : 현재 페이지 내의 특정 요소(엘리먼트)의 ID값
+- fragment identifier : 현재 페이지 내의 특정 요소(요소)의 ID값
 - `<a href="#bottom">아래로</a>`
 - 이메일 주소
 - `<a href="mailto:aaa@google.com">메일보내기</a>`
@@ -421,7 +422,7 @@ i : 소문자 로마숫자
 
 - `<table>` : 표를 정의하는 태그
 - `<tr>` : 표의 각 행을 정의하는 태그. 테이블의 헤더는 `<th>` 태그를 이용한다. `<th>` 태그는 기본적으로 굵은 글씨와 가운데 정렬로 표시된다.
-- `<td>` : 테이블의 데이터나 셀을 정의한다. `<td>` 태그는 text, images, lists, 다른 table 등 모든 html 엘리먼트를 포함할 수 있다.
+- `<td>` : 테이블의 데이터나 셀을 정의한다. `<td>` 태그는 text, images, lists, 다른 table 등 모든 html 요소를 포함할 수 있다.
 - `<caption>` : 테이블의 캡션을 정의한다.
 - `<colgroup>` : 한개 이상의 컬럼의 서식을 정의한다.
 - `<col>` : colgroup의 각 컬럼에 대한 속성을 정의한다.
@@ -542,6 +543,7 @@ i : 소문자 로마숫자
 [jsfiddle](https://jsfiddle.net/qcszpwhg/)
 
 ## 7.2 오디오 (audio) 태그
+
 HTML5에서 새로 생긴 오디오를 포함하는 태그이다.
 
 ```
@@ -578,6 +580,7 @@ source 태그를 이용해 여러 가지 파일을 지정할 수 있다.
 - controls : 오디오 콘트롤 도구를 표시할지 여부
 
 ## 7.3 비디오 (video) 태그
+
 HTML5에서 새로 생긴 비디오를 포함하는 태그이다.
 
 ```
@@ -606,9 +609,11 @@ HTML5에서 새로 생긴 비디오를 포함하는 태그이다.
 - height : 비디오의 세로 크기
 
 ## 7.4 Youtube 넣어 보기
+
 Youtue 영상을 넣는 방법에는 여러가지가 있으나 object나 embed는 deprecated되었고 w3schools에서 추천하는 iframe을 이용한다.
 
 기본적으로 Youtube영상의 id를 넣으면 된다. (예제에서 id는 tgbNymZ7vqY)
+
 ```
 <!DOCTYPE html>
 <html>
@@ -621,7 +626,8 @@ Youtue 영상을 넣는 방법에는 여러가지가 있으나 object나 embed�
 
 영상을 자동재생하려면 autoplay라는 파라미터(쿼리스트링)를 이용한다.
 0이 디폴트이며 자동재생 안함. 1이 재동재생.
-* 자동 재생은 방문자가 원치 않을 경는 경우도 많으니 사용자 경험을 해치지 않게 신중히 결정*
+
+- 자동 재생은 방문자가 원치 않을 경는 경우도 많으니 사용자 경험을 해치지 않게 신중히 결정\*
 
 ```
 <!DOCTYPE html>
@@ -634,6 +640,7 @@ Youtue 영상을 넣는 방법에는 여러가지가 있으나 object나 embed�
 ```
 
 그외 파라미터
+
 - loop : 반복재생, 0(미설정)이 기본값, 1이 설정
 - controls : Youtube 콘트롤 표시 여부, 0(미표시)이 기본값, 1이 설정
 

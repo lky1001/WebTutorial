@@ -22,7 +22,7 @@ HTML5에서는 HTML는 문서의 정의, 구조화를 담당하고, CSS는 styli
 
 (출처 : http://www.nextree.co.kr/p8468/)
 
-위와 같은 것을 Rule Set(또는 Rule)이라 하며 셀렉터에 의해 선택된 특정 HTML 엘리먼트를 어떻게 렌더링(Rendering)할 것인지 브라우저에 지시하는 역할을 한다. 위의 CSS Rule set은 HTML 문서에 속해 있는 셀렉터를 통해 모든 p 요소를 선택한 후 선택된 p 요소의 스타일을 선언 블록에서 정의하고 있다.
+위와 같은 것을 Rule Set(또는 Rule)이라 하며 셀렉터에 의해 선택된 특정 HTML 요소를 어떻게 렌더링(Rendering)할 것인지 브라우저에 지시하는 역할을 한다. 위의 CSS Rule set은 HTML 문서에 속해 있는 셀렉터를 통해 모든 p 요소를 선택한 후 선택된 p 요소의 스타일을 선언 블록에서 정의하고 있다.
 
 이와 같은 Rule Set의 모아 놓을 것을(집합) 스타일시트(Style Sheet)라 한다.
 
@@ -43,7 +43,7 @@ body {
 
 ### 1.3 프로퍼티(Property, 속성)
 
-셀럭터로 스타일을 적용 원하는 HTML 엘리먼트를 선택한 후 `{ }` 내부에 `프로퍼티: 밸류` 형식으로 원하는 스타일을 지정한다.
+셀럭터로 스타일을 적용 원하는 HTML 요소를 선택한 후 `{ }` 내부에 `프로퍼티: 밸류` 형식으로 원하는 스타일을 지정한다.
 프로퍼티는 여러 개를 적용할 수 있으며 `;`으로 각 프로퍼티를 구분해 준다.
 
 ```
@@ -115,7 +115,7 @@ p  { background: blue; }
 
 ### 3.3 inline style
 
-HTML 엘리먼트의 style 속성에 css를 작성한다.
+HTML 요소의 style 속성에 css를 작성한다.
 
 ```
 <!DOCTYPE html>
@@ -129,11 +129,61 @@ HTML 엘리먼트의 style 속성에 css를 작성한다.
 
 ## 3. 선택자 (Selector)
 
-CSS 선택자는 HTML 엘리먼트의 name, id, class, 기타 속성 등으로 스타일을 적용할 HTML 엘리먼트를 선택하는 역할을 한다. 선택자를 이용해서 HTML 엘리먼트를 특정한 후 선택된 요소에 스타일을 적용하게 되는 것이다.
+CSS 선택자는 HTML 요소의 name, id, class, 기타 속성 등으로 스타일을 적용할 HTML 요소를 선택하는 역할을 한다. 선택자를 이용해서 HTML 요소를 특정한 후 선택된 요소에 스타일을 적용하게 되는 것이다.
+
+여러 개의 HTML 요소를 한번에 선택할 수도 있으며 콤마(,)로 구분한다.
+
+```
+h1, h2, h3 { color: blue; }
+```
 
 ### 3.1 전체 선택자(Universal Selector)
 
+패턴 : `*`
+설명 : html과 head를 포함하여 HTML 문서의 모든 요소를 선택한다.
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * { color: blue; }
+  </style>
+</head>
+<body>
+  <h1>헬로우</h1>
+  <div>
+    <p>월드 1</p>
+    <p>콘 2</p>
+  </div>
+  <p>덕덕 3</p>
+</body>
+</html>
+```
+
 ### 3.2 태그 선택자(Type Selector)
+
+패턴 : HTML 태그명
+설명 : HTML 태그명을 가진 요소를 선택한다.
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    p { color: blue; }
+  </style>
+</head>
+<body>
+  <h1>헬로우</h1>
+  <div>
+    <p>우리만</p>
+    <p>파랗다</p>
+  </div>
+  <p>덕덕 3</p>
+</body>
+</html>
+```
 
 ### 3.3 클래스 선택자(Class Selector)
 
