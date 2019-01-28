@@ -559,6 +559,37 @@ p[name|=kai]일 경우 `<p name="kai">`와 `<p name="kai-">`와 같은 패턴이
 
 ### 3.7 가상 클래스 셀렉터(Pseudo-Class Selector)
 
+가상 클래스는 실제 존재하지는 않지만 요소의 상태에 따라 스타일을 지정하기 위해 선택하는 방법ㅇ이다.
+상태의 예는 다음과 같다.
+
+- 마우스가 올라 갔을때
+- 링크에 이미 방문한 경우
+- 링크에 아직 방문하지 않은 경우
+
+가상클래스는 `셀렉터:상태`와 같이 `:`으로 구분하여 사용한다.
+CSS 표준에 의해 이미 정해진 이름이 있기 때문에 임의로 지정할 수는 없다
+
+```
+셀렉터:presudo-class {
+  속성: 값;
+}
+```
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* a 요소가 hover 상태일 때 */
+    a:hover { color: red; }
+  </style>
+</head>
+<body>
+  <a href="#">올려봐~</a><br><br>
+</body>
+</html>
+```
+
 ### 3.7.1 링크 셀렉터(Link pseudo-classes), 동적 셀렉터(User action pseudo-classes)
 
 ### 3.7.2 UI 요소 상태 셀렉터(UI element states pseudo-classes)
