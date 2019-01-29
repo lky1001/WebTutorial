@@ -590,9 +590,88 @@ CSS 표준에 의해 이미 정해진 이름이 있기 때문에 임의로 지�
 </html>
 ```
 
+[모든 가상 클래스](https://developer.mozilla.org/ko/docs/Web/CSS/Pseudo-classes)
+
 ### 3.7.1 링크 셀렉터(Link pseudo-classes), 동적 셀렉터(User action pseudo-classes)
 
+- `:link` 선택된 요소가 아직 방문하지 않은 링크
+- `:visited` 선택된 요소가 이미 방문한 링크
+- `:hover` 선택된 요소가 링크에 마우스가 올라와 있을때
+- `:active` 선택된 요소가 클릭된 상태일때(클릭에서 뗄때까지)
+- `:focus` 선택된 요소에 포커스가 되어 있을 때
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* a 요소가 방문하지 않은 링크일 때 */
+    a:link { color: orange; }
+
+    /* a 요소가 방문한 링크일 때 */
+    a:visited { color: green; }
+
+    /* a 요소에 마우스가 올라와 있을 때 */
+    a:hover { font-weight: bold; }
+
+    /* a 요소가 클릭된 상태일 때 */
+    a:active { color: blue; }
+
+    /* text input 요소와 password input 요소에 포커스가 들어와 있을 때 */
+    input[type=text]:focus,
+    input[type=password]:focus {
+      color: red;
+    }
+    </style>
+  </head>
+<body>
+  <a href="#" target="_blank">This is a link</a><br>
+  <input type="text" value="I'll be red when focused"><br>
+  <input type="password" value="I'll be red when focused">
+</body>
+</html>
+```
+
 ### 3.7.2 UI 요소 상태 셀렉터(UI element states pseudo-classes)
+
+- `:checked` 선택된 요소가 체크(선택) 상태일 때
+- `:enabled` 선택된 요소가 사용 가능한 상태일 때
+- `:disabled` 선택된 요소가 사용 불가능한 상태일 때
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* input 요소가 사용 가능한 상태일 때,
+       input 요소 바로 뒤에 위치하는 인접 형제 span 요소를 선택 */
+    input:enabled + span {
+      color: blue;
+    }
+    /* input 요소가 사용 불가능한 상태일 때,
+       input 요소 바로 뒤에 위치하는 인접 형제 span 요소를 선택 */
+    input:disabled + span {
+      color: gray;
+      text-decoration: line-through;
+    }
+    /* input 요소가 체크 상태일 때,
+       input 요소 바로 뒤에 위치하는 인접 형제 span 요소를 선택 */
+    input:checked + span {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <input type="radio" checked="checked" value="male" name="gender"> <span>Male</span><br>
+  <input type="radio" value="female" name="gender"> <span>Female</span><br>
+  <input type="radio" value="neuter" name="gender" disabled> <span>Neuter</span><hr>
+
+  <input type="checkbox" checked="checked" value="bicycle"> <span>I have a bicycle</span><br>
+  <input type="checkbox" value="car"> <span>I have a car</span><br>
+  <input type="checkbox" value="motorcycle" disabled> <span>I have a motorcycle</span>
+</body>
+</html>
+```
 
 ### 3.7.3 구조 가상 클래스 셀렉터(Structural pseudo-classes)
 
