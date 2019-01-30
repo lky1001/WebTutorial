@@ -675,6 +675,195 @@ CSS 표준에 의해 이미 정해진 이름이 있기 때문에 임의로 지�
 
 ### 3.7.3 구조 가상 클래스 셀렉터(Structural pseudo-classes)
 
+- `:first-child` 선택된 모든 요소들 중 자신의 부모의 첫번째 자식 요소인 것을 선택한다.
+- `:last-child` 선택된 모든 요소들 중 자신의 부모의 마지막 자식 요소를 선택한다.
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* p 요소 중에서 첫번째 자식을 선택 */
+    p:first-child { color: red; }
+
+    /* p 요소 중에서 마지막 자식을 선택 */
+    /* body 요소의 두번째 p 요소는 마지막 자식 요소가 아니다.
+       body 요소의 마지막 자식 요소는 div 요소이다. */
+    p:last-child { color: blue; }
+  </style>
+</head>
+<body>
+  <p>This paragraph is the first child of its parent (body).</p>
+
+  <h1>Welcome to My Homepage</h1>
+  <p>This paragraph is not the first child of its parent.</p>
+
+  <div>
+    <p>This paragraph is the first child of its parent (div).</p>
+    <p>This paragraph is not the first child of its parent.</p>
+  </div>
+</body>
+</html>
+```
+
+- `nth-child(n)` 선택된 모든 요소들 중 자신의 부모의 n번째 자식 요소인 것을 선택한다.
+- `:nth-last-child(n)` 선택된 모든 요소들 중 자신의 부모의 마지막으로부터 n번째 자식 요소를 선택한다.
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* ol 요소의 자식 요소인 li 요소 중에서 짝수번째 요소만을 선택 */
+    ol > li:nth-child(2n)   { color: orange; }
+    /* ol 요소의 자식 요소인 li 요소 중에서 홀수번째 요소만을 선택 */
+    ol > li:nth-child(2n+1) { color: green; }
+
+    /* ol 요소의 자식 요소인 li 요소 중에서 첫번쨰 요소만을 선택 */
+    ol > li:first-child     { color: red; }
+    /* ol 요소의 자식 요소인 li 요소 중에서 마지막 요소만을 선택 */
+    ol > li:last-child      { color: blue; }
+
+    /* ol 요소의 자식 요소인 li 요소 중에서 4번째 요소 요소만을 선택 */
+    ol > li:nth-child(4)    { background: brown; }
+
+    /* ul 요소의 모든 자식 요소 중에서 뒤에서부터 시작하여 홀수번째 요소만을 선택 */
+    ul > :nth-last-child(2n+1) { color: red; }
+    /* ul 요소의 모든 자식 요소 중에서 뒤에서부터 시작하여 짝수번째 요소만을 선택 */
+    ul > :nth-last-child(2n)   { color: blue; }
+  </style>
+</head>
+<body>
+  <ol>
+    <li>Espresso</li>
+    <li>Americano</li>
+    <li>Caffe Latte</li>
+    <li>Caffe Mocha</li>
+    <li>Caramel Latte</li>
+    <li>Cappuccino</li>
+  </ol>
+
+  <ul>
+    <li>Espresso</li>
+    <li>Americano</li>
+    <li>Caffe Latte</li>
+    <li>Caffe Mocha</li>
+    <li>Caramel Latte</li>
+    <li>Cappuccino</li>
+  </ul>
+</body>
+</html>
+```
+
+- `:first-of-type` 선택된 요소의 부모 요소의 자식 요소중 첫번째 요소를 선택
+- `:last-of-type` 선택된 요소의 부모 요소의 자식 요소중 마지막 요소를 선택
+- `:nth-of-type(n)` 선택된 요소의 부모 요소의 자식 요소 중 앞에서 n번째 요소를 선택
+- `:nth-last-of-type(n)` 선택된 요소의 부모 요소의 자식 요소 중 뒤에서 n번째 요소를 선택
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* p 요소의 부모 요소의 자식 요소 중 첫번째 등장하는 p 요소 */
+    p:first-of-type  { color: red; }
+    /* p 요소의 부모 요소의 자식 요소 중 마지막 등장하는 p 요소 */
+    p:last-of-type   { color: blue; }
+    /* p 요소의 부모 요소의 자식 요소 중 앞에서 2번째에 등장하는 p 요소 */
+    p:nth-of-type(2) { color: green; }
+    /* p 요소의 부모 요소의 자식 요소 중 뒤에서 2번째에 등장하는 p 요소 */
+    p:nth-last-of-type(2) { color: orange;}
+
+    /* p 요소 중에서 첫번째 자식을 선택 */
+    p:first-child { background: brown;}
+  </style>
+</head>
+<body>
+  <h1>This is a heading</h1>
+  <p>The first paragraph.</p>
+  <p>The second paragraph.</p>
+  <p>The third paragraph.</p>
+  <p>The fourth paragraph.</p>
+  <div>
+    <h1>This is a heading</h1>
+    <p>The first paragraph.</p>
+    <p>The second paragraph.</p>
+    <p>The third paragraph.</p>
+    <p>The fourth paragraph.</p>
+  </div>
+</body>
+</html>
+```
+
 ### 3.7.4 부정 셀렉터(Negation pseudo-class)
 
+- `:not` 셀렉터에 해당하지 않는 모든 요소를 선택
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* input 요소 중에서 type 어트리뷰트의 값이 password가 아닌 요소를 선택 */
+    input:not([type=password]) {
+      background: yellow;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" value="Text input">
+  <input type="email" value="email input">
+  <input type="password" value="Password input">
+</body>
+</html>
+```
+
 ### 3.8 가상 요소 셀렉터(Pseudo-Element Selector)
+
+요소의 특정 부분에 스타일을 적용하기 위해 사용한다.
+
+- 요소 컨텐츠의 첫글자 또는 첫줄
+- 요소 컨텐츠의 앞 또는 뒤
+
+가상 요소는 `::` 을 사용한다.
+
+- `::first-letter` 컨텐츠의 첫 번째 글자를 선택
+- `::first-line` 컨텐츠의 첫줄 선택, 블록 요소에만 적용 가능
+- `::before` 컨텐츠의 앞에 위치하는 공간을 선택, 주로 content 속성과 함께 사용
+- `::after` 컨텐츠의 뒤에 위치하는 공간을 선택, 주로 content 속성과 함께 사용
+- `::selection` 드래그한 컨텐츠를 선택, 사파리나 ios에서 동작하지 않음
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* p 요소 콘텐츠의 첫글자를 선택 */
+    p::first-letter { font-size: 3em; }
+    /* p 요소 콘텐츠의 첫줄을 선택 */
+    p::first-line   { color: red; }
+
+    /* h1 요소 콘텐츠의 앞 공간에 content 어트리뷰트 값을 삽입한다 */
+    h1::before {
+      content: " HTML!!! ";
+      color: blue;
+    }
+    /* h1 요소 콘텐츠의 뒷 공간에 content 어트리뷰트 값을 삽입한다 */
+    h1::after {
+      content: " CSS3!!!";
+      color: red;
+    }
+
+    /* 드래그한 콘텐츠를 선택한다 */
+    ::selection {
+      color: red;
+      background: yellow;
+    }
+  </style>
+</head>
+<body>
+  <h1>This is a heading</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo illum sunt distinctio sed, tempore, repellat rerum et ea laborum voluptatum! Quisquam error fugiat debitis maiores officiis, tenetur ullam amet in!</p>
+</body>
+</html>
+```
