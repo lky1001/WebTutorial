@@ -1006,4 +1006,74 @@ em은 상대 단위 요소이다. 요소에 지정된 사이즈(부모의 사이
 </html>
 ```
 
-### 4.2.3 rem
+### 4.2.4 rem
+
+em은 상속 때기 때문에 상황에 따라 값이 바뀔 수 있다. 같은 1.5em이여도 값이 다를 수 있다.
+
+rem은 최상위 요소(html)의 사이즈를 기준으로 한다. rem의 r은 root를 의미한다.
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    html {
+      font-size: 14px;
+      /* font-size 미지정 시에는 16px */
+    }
+    div {
+      font-size: 1.2rem; /* html font-size: 14px * 1.2 = 16.8px */
+      font-weight: bold;
+      padding: 2em;
+      text-align: center;
+    }
+    .box1 { background-color: rgba(255, 0, 0, 0.2); }
+    .box2 { background-color: rgba(255, 0, 0, 0.6); }
+    .box3 { background-color: rgba(255, 0, 0, 0.8); }
+  </style>
+</head>
+<body>
+  <div class='box1'>
+    Font size: 1.2rem ⇒ 14px * 1.2 = 16.8px
+    <div class='box2'>
+      Font size: 1.2rem ⇒ 14px * 1.2 = 16.8px
+      <div class='box3'>
+        Font size: 1.2rem ⇒ 14px * 1.2 = 16.8px
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+```
+
+### 4.2.5 viewport
+
+웹페이지가 화면(Display)에 표시 되는 영역을 뜻한다. viewport는 웹 표준은 아니지만
+
+애플의 모바일 사파리가 viwport라는 meta 태그를 도입해 웹 개발자들이 viewport의 크기와 스케일을 조장할 수 있게 했고,
+
+현재는 대부분의 모바일 브라우저들이 이를 지원한다.
+
+PC의 viewport와 모바일의 viewport는 다른 점이 있다. PC의 viewport는 브라우저의 창에 보이는 영역과 같다.
+
+즉 사용자가 브라우저 창의 크기를 조절하면 viewport의 크기도 조절된다.
+
+웹페이지가 viewport보다 크면 스크롤을 할 수 있다.
+
+하지만 모바일 viewport는 브라우저 창보다 작을 수도 있고, 클수도 있다. 여러가지 터치 동작으로 viewport 배율을 변경할 수 도있다. (크기를 조절하는 것은 아님)
+
+viewport에 대한 자세한 내용은 반응형웹에서 다루고 여기서는 사이즈 단위만 다룬다.
+
+viewport의 단위는 방금 설명한 viewport를 기준으로 한 상대적 사이즈를 의미한다.
+
+- vw : viewport width의 100분의 1
+- vh : viewport height의 100분의 1
+- vmin : viewport의 width와 height 중 작은 쪽의 100분의 1
+- vmax : viewport의 width와 height 중 큰 쪽의 100분의 1
+
+viewport width가 1000px, height가 600px인 경우 사이즈는 아래와 같이 계산된다.
+
+1vw : viewport width 1000px의 1%인 10px
+1vh : viewport height 600px의 1%인 6px
+vmin : viewport height 600px의 1%인 6px
+vmax : viewport width 1000px의 1%인 10px
