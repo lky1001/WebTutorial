@@ -921,7 +921,7 @@ px는 요소나 이미지의 크기 지정에 주로 사용된다.
 </html>
 ```
 
-### 4.2.1 % (퍼센트)
+### 4.2.2 % (퍼센트)
 
 % 단위는 백분률로 상대 단위로 계산된다. 요소에 지정된 사이즈(부모의 사이즈나 없으면 기본 사이즈) 에 상대적인 크기로 설정된다.
 
@@ -944,3 +944,66 @@ px는 요소나 이미지의 크기 지정에 주로 사용된다.
 </body>
 </html>
 ```
+
+### 4.2.3 em
+
+em은 상대 단위 요소이다. 요소에 지정된 사이즈(부모의 사이즈나 기본 사이즈)에 상대적인 사이즈를 설정하게 되고 배수로 지정된다. 예를 들어 부모 사이즈가 14px인 경우 1em은 14px이고 2em은 28px가 된다.
+
+폰트 사이즈나 컨테이너의 크기에 주로 설정한다.
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-size: 14px;
+      text-align: center;
+    }
+    div {
+      font-size: 1.2em; /* 14px * 1.2 = 16.8px */
+    }
+  </style>
+</head>
+<body>
+  <div>글자 크기: 1.2em → 14px * 1.2 = 16.8px</div>
+</body>
+</html>
+```
+
+**em은 모든 자식 요소에 영향을 주기 때문에 주의해야 한다.**
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-size: 14px;
+      text-align: center;
+    }
+    div {
+      font-size: 1.2em; /* 14px * 1.2 = 16.8px */
+      font-weight: bold;
+      padding: 2em;
+    }
+    .box1 { background-color: rgba(255, 0, 0, 0.2); }
+    .box2 { background-color: rgba(255, 0, 0, 0.6); }
+    .box3 { background-color: rgba(255, 0, 0, 0.8); }
+  </style>
+</head>
+<body>
+  <div class='box1'>
+    Font size: 1.2em ⇒ 14px * 1.2 = 16.8px
+    <div class='box2'>
+      Font size: 1.2em ⇒ 16.8px * 1.2 = 20.16px
+      <div class='box3'>
+        Font size: 1.2em ⇒ 20.16px * 1.2 = 24.192px
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+```
+
+### 4.2.3 rem
