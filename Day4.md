@@ -1077,3 +1077,15 @@ viewport width가 1000px, height가 600px인 경우 사이즈는 아래와 같�
 1vh : viewport height 600px의 1%인 6px
 vmin : viewport height 600px의 1%인 6px
 vmax : viewport width 1000px의 1%인 10px
+
+### 4.2.6 색상
+
+색상을 표현하는 단위에는 미리 지정된 키워드(black, red 등등)가 몇 가지 있으며 미리 지정된 색상은 [https://www.w3.org/TR/css-color-3/](https://www.w3.org/TR/css-color-3/) 에서 확인할 수 있다.
+
+더 다양한 색상을 표현하기 위해서는 다음을 사용할 수 있다.
+
+- `16진수 코드 값` : #00ffff 와 같은 형태를 이루며 2자리씩 R,G,B 값을 나타내며 각각의 자리는 0~FF(10진수로 255)의 범위이다.
+- `RGB(Red값, Green값, Blue값)` : rgb(255, 0, 0) 와 같이 쓰며 0~255까지 값을 쓸 수 있다.
+- `RGBA(Red값, Green값, Blue값, Alpha/투명도)` : rgb 색상에 투명도를 조절할 수 있다. rgb(255, 0, 0, 0.1), 여기서 알파는 0 ~ 1의 실수 범위이다.
+- `HSL(Hue/색상, Saturation/채도, Lightness/명도)` : hsl(0, 100%, 0%) 와 같이 나타내며 Hue는 0~360의 숫자, 나머지는 0% ~ 100%로 백분률로 나태낸다. 참고 https://www.w3schools.com/colors/colors_hsl.asp
+- `HSLA(Hue, Saturation, Lightness, Alpha)` : 투명도까지 조절할 수 있다. 여기서 알파는 0 ~ 1의 실수 범위이다. https://www.w3schools.com/cssref/func_hsla.asp
