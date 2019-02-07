@@ -1089,3 +1089,10 @@ vmax : viewport width 1000px의 1%인 10px
 - `RGBA(Red값, Green값, Blue값, Alpha/투명도)` : rgb 색상에 투명도를 조절할 수 있다. rgb(255, 0, 0, 0.1), 여기서 알파는 0 ~ 1의 실수 범위이다.
 - `HSL(Hue/색상, Saturation/채도, Lightness/명도)` : hsl(0, 100%, 0%) 와 같이 나타내며 Hue는 0~360의 숫자, 나머지는 0% ~ 100%로 백분률로 나태낸다. 참고 https://www.w3schools.com/colors/colors_hsl.asp
 - `HSLA(Hue, Saturation, Lightness, Alpha)` : 투명도까지 조절할 수 있다. 여기서 알파는 0 ~ 1의 실수 범위이다. https://www.w3schools.com/cssref/func_hsla.asp
+
+# 5. 박스 모델
+
+모든 HTML 요소는 박스 형태의 영역을 갖고 있다. 이 박스는 컨텐츠(Content), 패딩(Padding), 테두리(Border), 마진(Margin)로 구성된다.
+
+<img src="https://poiemaweb.com/img/box-model.png"/>
+출처 : https://poiemaweb.com/css3-box-model
