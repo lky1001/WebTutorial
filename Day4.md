@@ -1096,3 +1096,36 @@ vmax : viewport width 1000px의 1%인 10px
 
 <img src="https://poiemaweb.com/img/box-model.png"/>
 출처 : https://poiemaweb.com/css3-box-model
+
+브라우저는 요소를 화면에 그릴때(렌더링) 속성(배경, 색상 등)과 위치를 근거로 한다.
+
+컨텐츠(Content) : HTML 요소의 텍스트나 이미지 등 실제 화면에 보여지는 내용이 위치하는 영역. width, height 속성을 갖음
+패딩(Padding) : 테두리(Border) 안쪽에 위치하는 요소의 내부 여백 영역이다. padding의 속성 값은 패딩의 두께를 나타내며 기본색은 투명(transparent)이다. HTML 요소에 배경색이나 배경 이미지를 지정하면 패딩까지 적용이 된다.
+테두리(Border) : 테두리(Border) 영역으로 border의 속성 값은 테두리의 두께를 나타낸다.
+마진(Margin) : 테두리(Border) 밖의 영역으로 HTML 요소의 외부 여백 영역이다. 마진 속성 값은 마진 영역의 두께를 나타내며 투명색으로 배경색을 지정할 수 없다.
+
+```
+<html>
+<head>
+  <style>
+    div {
+      /* 배경색의 지정: 콘텐츠 영역과 패딩 영역에 적용된다. */
+      background-color: lightgrey;
+      /* 콘텐츠 영역의 너비 */
+      width: 300px;
+      /* 패딩 영역의 두께 */
+      padding: 25px;
+      /* 테두리: 두께 형태 색상 */
+      border: 25px solid navy;
+      /* 마진 영역의 두께 */
+      margin: 25px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Box Model</h2>
+
+  <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+</body>
+</html>
+```
