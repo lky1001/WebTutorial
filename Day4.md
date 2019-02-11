@@ -1129,3 +1129,8 @@ vmax : viewport width 1000px의 1%인 10px
 </body>
 </html>
 ```
+
+# 5.1. width, height 속성
+
+width와 height 속성은 HTML 요소의 가로와 세로 크기를 지정한다. 컨텐츠 영역에 적용된다.
+`box-sizing` 속성의 기본값이 `content-box`이기 떄문에 컨텐츠 영역에 적용되는 것이며, `box-sizing` 속성에 `border-box` 값을 석용하면 `padding`, `border`가 포함된 영역을 지정할 수 있다.
