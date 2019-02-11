@@ -1134,3 +1134,28 @@ vmax : viewport width 1000px의 1%인 10px
 
 width와 height 속성은 HTML 요소의 가로와 세로 크기를 지정한다. 컨텐츠 영역에 적용된다.
 `box-sizing` 속성의 기본값이 `content-box`이기 떄문에 컨텐츠 영역에 적용되는 것이며, `box-sizing` 속성에 `border-box` 값을 석용하면 `padding`, `border`가 포함된 영역을 지정할 수 있다.
+
+만약 width와 height로 지정한 컨텐츠 영역보다 컨텐츠의 크기가 클 경우 영역을 넘치게 된다.
+`overflow: hidden` 속서을 지정하면 컨텐츠 영역을 넘치는 컨텐츠를 감출 수 있다.
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    div {
+      width: 300px;
+      height: 100px;
+      background-color: cornsilk;
+      border: 5px solid navy;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+</body>
+</html>
+```
