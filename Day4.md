@@ -1136,7 +1136,7 @@ width와 height 속성은 HTML 요소의 가로와 세로 크기를 지정한다
 `box-sizing` 속성의 기본값이 `content-box`이기 떄문에 컨텐츠 영역에 적용되는 것이며, `box-sizing` 속성에 `border-box` 값을 석용하면 `padding`, `border`가 포함된 영역을 지정할 수 있다.
 
 만약 width와 height로 지정한 컨텐츠 영역보다 컨텐츠의 크기가 클 경우 영역을 넘치게 된다.
-`overflow: hidden` 속서을 지정하면 컨텐츠 영역을 넘치는 컨텐츠를 감출 수 있다.
+`overflow: hidden` 속성을 지정하면 컨텐츠 영역을 넘치는 컨텐츠를 감출 수 있다.
 
 ```
 <!DOCTYPE html>
@@ -1157,5 +1157,108 @@ width와 height 속성은 HTML 요소의 가로와 세로 크기를 지정한다
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   </div>
 </body>
+</html>
+```
+
+# 5.2. margin, padding 속성
+
+margin, padding 속성은 컨텐츠의 4개 방향(top, right, left, bottom)에 대해 지정이 가능하다.
+
+<img src="https://poiemaweb.com/img/box-model-detail.png">
+출처 : https://poiemaweb.com/css3-box-model
+
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {
+        border: 5px solid red;
+
+        margin-top: 40px;
+        margin-right: 30px;
+        margin-bottom: 20px;
+        margin-left: 10px;
+
+        padding-top: 10px;
+        padding-right: 20px;
+        padding-bottom: 30px;
+        padding-left: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+  </body>
+</html>
+```
+
+margin이나 padding은 한쪽 면씩 각각 지정할 수도 있지만, 한꺼번에 지정할 수도 있다.
+
+4개의 값을 지정하면 아래의 의미와 같다.
+
+```
+margin: 10px 20px 30px 40px;
+
+margin-top: 10px;
+margin-right: 20px;
+margin-bottom: 30px;
+margin-left: 40px;
+```
+
+3개의 값을 지정하면 가운데 값은 right, left 값이 된다.
+
+```
+margin: 10px 20px 40px;
+
+margin-top: 10px;
+margin-right: 20px;
+margin-left: 20px;
+margin-bottom: 30px;
+```
+
+2개의 값을 지정하면 top/bottom, right/left로 값이 적용 된다.
+
+```
+margin: 10px 20px;
+
+margin-top: 10px;
+margin-bottom: 10px;
+margin-right: 20px;
+margin-left: 20px;
+```
+
+1개의 값을 지정하면 4곳에 모두 적용된다.
+
+```
+margin: 10px;
+
+margin-top: 10px;
+margin-bottom: 10px;
+margin-right: 10px;
+margin-left: 10px;
+```
+
+마진 속성에 auto 값을 지정하면 가운데 정렬 효과를 낼 수 있다.
+
+```
+margin: 0 auto;
+```
+
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {
+        border: 5px solid red;
+        width: 600px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+  </body>
 </html>
 ```
