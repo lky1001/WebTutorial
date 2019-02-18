@@ -1130,7 +1130,7 @@ vmax : viewport width 1000px의 1%인 10px
 </html>
 ```
 
-# 5.1. width, height 속성
+# 5.1 width, height 속성
 
 width와 height 속성은 HTML 요소의 가로와 세로 크기를 지정한다. 컨텐츠 영역에 적용된다.
 `box-sizing` 속성의 기본값이 `content-box`이기 떄문에 컨텐츠 영역에 적용되는 것이며, `box-sizing` 속성에 `border-box` 값을 석용하면 `padding`, `border`가 포함된 영역을 지정할 수 있다.
@@ -1160,7 +1160,7 @@ width와 height 속성은 HTML 요소의 가로와 세로 크기를 지정한다
 </html>
 ```
 
-# 5.2. margin, padding 속성
+# 5.2 margin, padding 속성
 
 margin, padding 속성은 컨텐츠의 4개 방향(top, right, left, bottom)에 대해 지정이 가능하다.
 
@@ -1262,3 +1262,67 @@ margin: 0 auto;
   </body>
 </html>
 ```
+
+# 5.3 border 속성
+
+border 속성은 컨텐츠의 테두리를 지정한다.
+
+## 5.3.1 border-style
+
+`border-style` 속성은 테두리의 선 스타일을 지정한다.
+
+선 종류는 [여기](https://developer.mozilla.org/ko/docs/Web/CSS/border-style)를 참고한다.
+
+`border-style`은 마진, 패딩과 마찬가지로 4개의 방향(top, right, left, bottom)에 대해 각각 지정이 가능하다.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      p {
+        background: palegreen;
+        padding: 10px;
+      }
+      p.d1 {
+        /* four sides */
+        border-style: dashed;
+      }
+      p.d2 {
+        /* horizontal | vertical */
+        border-style: dotted solid;
+      }
+      p.d3 {
+        /* top | horizontal | bottom */
+        border-style: hidden double dashed;
+      }
+      p.d4 {
+        /* top | right | bottom | left */
+        border-style: none solid dotted dashed;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="d1">border-style: dashed;</p>
+    <p class="d2">border-style: dotted solid;</p>
+    <p class="d3">border-style: hidden double dashed;</p>
+    <p class="d4">border-style: none solid dotted dashed;</p>
+  </body>
+</html>
+```
+
+## 5.3.2 border-width
+
+`border-width` 속성은 테두리의 두께를 지정한다. 이전과 마찬가지로 마찬가지로 4개의 방향(top, right, left, bottom)에 대해 각각 지정이 가능하다.
+
+_border-width 속성은 border-style과 함께 사용하지 않으면 적용되지 않는다._
+
+[예제](https://developer.mozilla.org/ko/docs/Web/CSS/border-width)
+
+## 5.3.2 border-color 속성
+
+`border-color` 속성은 테두리의 색상을 지정한다. 이전과 마찬가지로 마찬가지로 4개의 방향(top, right, left, bottom)에 대해 각각 지정이 가능하다.
+
+_border-color 속성은 border-style과 함께 사용하지 않으면 적용되지 않는다._
+
+[예제](https://developer.mozilla.org/ko/docs/Web/CSS/border-color)
