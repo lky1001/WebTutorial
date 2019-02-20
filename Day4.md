@@ -1326,3 +1326,35 @@ _border-width 속성은 border-style과 함께 사용하지 않으면 적용되�
 _border-color 속성은 border-style과 함께 사용하지 않으면 적용되지 않는다._
 
 [예제](https://developer.mozilla.org/ko/docs/Web/CSS/border-color)
+
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      p {
+        background: palegreen;
+        padding: 10px;
+        border-style: solid;
+      }
+      p.one {
+        border-color: red;
+      }
+      p.two {
+        border-color: green;
+      }
+      p.three {
+        border-color: red green blue yellow;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h2>border-color Property</h2>
+
+    <p class="one">border-color: red</p>
+    <p class="two">border-color: green</p>
+    <p class="three">border-color: red green blue yellow</p>
+  </body>
+</html>
+```
