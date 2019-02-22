@@ -1359,4 +1359,8 @@ _border-color 속성은 border-style과 함께 사용하지 않으면 적용되�
 </html>
 ```
 
+## 3.5.4 border-radius
+
+`border-radius` 속성은 테두리의 모서리를 둥글게 표현한다. 속성 값은 px, em같은 단위와 %를 사용한다. 이전과 마찬가지로 마찬가지로 4개의 방향(top, right, left, bottom)에 대해 각각 지정이 가능하다.
+
 ## 3.5.4 border
