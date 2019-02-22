@@ -1319,7 +1319,7 @@ _border-width 속성은 border-style과 함께 사용하지 않으면 적용되�
 
 [예제](https://developer.mozilla.org/ko/docs/Web/CSS/border-width)
 
-## 5.3.2 border-color 속성
+## 5.3.3 border-color 속성
 
 `border-color` 속성은 테두리의 색상을 지정한다. 이전과 마찬가지로 마찬가지로 4개의 방향(top, right, left, bottom)에 대해 각각 지정이 가능하다.
 
@@ -1358,3 +1358,5 @@ _border-color 속성은 border-style과 함께 사용하지 않으면 적용되�
   </body>
 </html>
 ```
+
+## 3.5.4 border
