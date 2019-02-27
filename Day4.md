@@ -1363,4 +1363,21 @@ _border-color 속성은 border-style과 함께 사용하지 않으면 적용되�
 
 `border-radius` 속성은 테두리의 모서리를 둥글게 표현한다. 속성 값은 px, em같은 단위와 %를 사용한다. 이전과 마찬가지로 마찬가지로 4개의 방향(top, right, left, bottom)에 대해 각각 지정이 가능하다.
 
-## 3.5.4 border
+## 3.5.5 border
+
+`border` 속성은 `border-width`, `border-style`, `border-color`을 한번에 설정할 수 있다.
+
+[예제](https://developer.mozilla.org/en-US/docs/Web/CSS/border)
+
+```
+p {
+  /* border-width border-style border-color */
+  border: 5px solid red;
+}
+```
+
+## 4 box-sizing 속성
+
+`box-sizing` 속성은 `width`와 `height`속성이 적용될 대상을 변경할 수 있다.
+기본값은 `content-box`이며, `width`와 `height`속성이 기본적으로 content 영역에 적용된다는 것을 의미한다.
+`border-box`로 지정하면 마진을 제외한 전체를 `width`와 `height`의 대상으로 지적할 수 있다.
